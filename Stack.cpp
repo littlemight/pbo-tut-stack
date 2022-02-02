@@ -22,14 +22,22 @@ Stack::Stack(const Stack& s) {
     }
 }
 
-
 Stack::~Stack() {
     delete[] this->data;
 }
 
 void Stack::push(int x) {
+    if (this->size < this->capacity) {
+        this->data[this->size] = x;
+        this->size++;
+    }
 }
 
 int Stack::pop() {
-    return 2210;
+    int top = 0;
+    if (this->size > 0) {
+        this->size--;
+        top = this->data[this->size];
+    }
+    return top;
 }

@@ -4,5 +4,5 @@
 compile:
 	g++ -o main main.cpp Stack.cpp
 
-run:
+run: compile
 	./main
