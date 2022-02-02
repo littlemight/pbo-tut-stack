@@ -15,6 +15,7 @@ public:
 
     void push(int x);       // menambahkan isi stack
     int pop();              // mengambil dan menghapus top dari stack
+    int top() const;        // melihat elemen teratas stack
 };
 
 #endif

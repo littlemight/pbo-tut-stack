@@ -38,3 +38,11 @@ int Stack::pop() {
     }
     return top;
 }
+
+int Stack::top() const {
+    int top = 0;
+    if (this->size > 0) {
+        top = this->data[this->size - 1];
+    }
+    return top;
+}
