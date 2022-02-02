@@ -18,6 +18,8 @@ public:
     int pop();              // mengambil dan menghapus top dari stack
     int top() const;        // melihat elemen teratas stack
     static int getNumOfStack();
+
+    friend int compareStackSize(const Stack& s1, const Stack& s2);
 };
 
 #endif
