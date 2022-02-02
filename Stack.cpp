@@ -24,6 +24,7 @@ Stack::Stack(const Stack& s) {
 
 
 Stack::~Stack() {
+    delete[] this->data;
 }
 
 void Stack::push(int x) {
