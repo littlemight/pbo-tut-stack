@@ -44,5 +44,14 @@ int main() {
 
     Stack s4 = s1 + s2;
     cout << "Op Overload: " << s1.getCapacity() << ' ' << s2.getCapacity() << ' ' << s4.getCapacity() << endl;
+
+
+    cout << "Function overload" << '\n';
+    s4.push(1);
+    cout << s4.top() << endl;
+    s4.push(2, 2);
+    cout << s4.pop() << endl;
+    cout << s4.pop() << endl;
+    cout << s4.pop() << endl;
     return 0;
 }

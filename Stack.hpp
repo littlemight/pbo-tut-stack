@@ -15,6 +15,7 @@ public:
     ~Stack();               // destructor
 
     void push(int x);       // menambahkan isi stack
+    void push(int x, int n); // memasukkan x sebanyak n kali ke stack
     int pop();              // mengambil dan menghapus top dari stack
     int top() const;        // melihat elemen teratas stack
     int getCapacity();

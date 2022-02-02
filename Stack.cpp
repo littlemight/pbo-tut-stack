@@ -35,6 +35,15 @@ void Stack::push(int x) {
     }
 }
 
+void Stack::push(int x, int n) {
+    if (this->size + n < this->capacity) {
+        while (n--) {
+            this->data[this->size] = x;
+            this->size++;
+        }
+    }
+}
+
 int Stack::pop() {
     int top = 0;
     if (this->size > 0) {
