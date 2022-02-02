@@ -7,6 +7,7 @@ private:
     int size;
     const int capacity;
     int* data;
+    static int n_stack;
 public:
     Stack();                // default constructor
     Stack(int cap);         // user defined constructor
@@ -16,6 +17,7 @@ public:
     void push(int x);       // menambahkan isi stack
     int pop();              // mengambil dan menghapus top dari stack
     int top() const;        // melihat elemen teratas stack
+    static int getNumOfStack();
 };
 
 #endif

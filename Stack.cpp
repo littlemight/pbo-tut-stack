@@ -1,14 +1,18 @@
 #include "Stack.hpp"
 #include <iostream>
 
+int Stack::n_stack = 0;
+
 Stack::Stack() : capacity(10) {
     this->size = 0;
     this->data = new int[this->capacity];
+    n_stack += 1;
 }
 
 Stack::Stack(int cap) : capacity(cap) {
     this->size = 0;
     this->data = new int[this->capacity];
+    n_stack += 1;
 }
 
 Stack::Stack(const Stack& s) : capacity(s.capacity) {
@@ -17,6 +21,7 @@ Stack::Stack(const Stack& s) : capacity(s.capacity) {
     for (int i = 0; i < this->capacity; i++) {
         this->data[i] = s.data[i];
     }
+    n_stack += 1;
 }
 
 Stack::~Stack() {
@@ -37,6 +42,10 @@ int Stack::pop() {
         top = this->data[this->size];
     }
     return top;
+}
+
+int Stack::getNumOfStack() {
+    return n_stack;
 }
 
 int Stack::top() const {
