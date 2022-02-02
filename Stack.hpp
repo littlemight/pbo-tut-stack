@@ -5,7 +5,7 @@
 class Stack {
 private:
     int size;
-    int capacity;
+    const int capacity;
     int* data;
 public:
     Stack();                // default constructor
