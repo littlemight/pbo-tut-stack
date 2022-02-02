@@ -17,9 +17,18 @@ public:
     void push(int x);       // menambahkan isi stack
     int pop();              // mengambil dan menghapus top dari stack
     int top() const;        // melihat elemen teratas stack
+    int getCapacity();
     static int getNumOfStack();
 
     friend int compareStackSize(const Stack& s1, const Stack& s2);
+
+    Stack operator+(const Stack& s);
+    // atau
+    friend Stack operator+(const Stack& s1, const Stack& s2);
+
+    // Latihan: coba jika fungsinya seperti berikut
+    // ->  Stack& operator+(const Stack& s)
+    // ->  friend Stack& operator+(const Stack& s1, const Stack& s2)
 };
 
 #endif

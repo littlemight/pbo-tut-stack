@@ -44,6 +44,10 @@ int Stack::pop() {
     return top;
 }
 
+int Stack::getCapacity() {
+    return Stack::capacity;
+}
+
 int Stack::getNumOfStack() {
     return n_stack;
 }
@@ -54,4 +58,11 @@ int Stack::top() const {
         top = this->data[this->size - 1];
     }
     return top;
+}
+
+// implementasi operator+ dibebaskan ke pembaca :)
+Stack Stack::operator+(const Stack& s) {
+    // ini contoh sederhana
+    Stack return_stack(Stack::capacity + s.capacity);
+    return return_stack;
 }
